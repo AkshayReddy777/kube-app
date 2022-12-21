@@ -23,6 +23,9 @@ spec:
             - mountPath: /var/lib/mysql
               name: vpro-db-data
           ports:
+            - name: vpro-db-port
+              containerPort: 3306
+          env:
             - name: MY_SQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
